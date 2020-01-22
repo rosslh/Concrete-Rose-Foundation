@@ -1,16 +1,16 @@
 <script>
   const info = [
     {
-      label: "Aeroponic Farming",
-      img: "fullyAutomated"
+      label: "AAA",
+      img: "aaa"
     },
     {
-      label: "Premium Produce",
-      img: "premiumProduce"
+      label: "BBB",
+      img: "bbb"
     },
     {
-      label: "Dedicated Growers",
-      img: "ourTeam"
+      label: "CCC",
+      img: "ccc"
     }
   ];
 </script>

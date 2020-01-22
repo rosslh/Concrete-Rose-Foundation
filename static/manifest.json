@@ -1,8 +1,8 @@
 {
   "background_color": "#ffffff",
-  "theme_color": "#afcb5b",
-  "name": "Queen's Vertical Farming Team",
-  "short_name": "QVFT",
+  "theme_color": "#000",
+  "name": "Concrete Rose Foundation",
+  "short_name": "CRF",
   "display": "minimal-ui",
   "start_url": "/",
   "icons": [

@@ -85,30 +85,24 @@
         <picture class="logo">
           <source srcset="logo.webp" type="image/webp" />
           <source srcset="logo.png" type="image/png" />
-          <img src="logo.png" alt="Queen's Vertical Farming Team" />
+          <img src="logo.png" alt="Concrete Rose Foundation" />
         </picture>
       </a>
     </div>
     <ul>
       <li>
-        <a class:selected={segment === 'what-we-do'} href="what-we-do">What We Do</a>
-      </li>
-      <li>
-        <a class:selected={segment === 'team'} href="team">
-          Our Team
+        <a class:selected={segment === 'what-we-do'} href="what-we-do">
+          What We Do
         </a>
       </li>
       <li>
-        <a
-          class:selected={segment === 'hiring'}
-          href="hiring">
-          Hiring
-        </a>
+        <a class:selected={segment === 'team'} href="team">Our Team</a>
       </li>
       <li>
-        <a
-          class:selected={segment === 'sponsorship'}
-          href="sponsorship">
+        <a class:selected={segment === 'hiring'} href="hiring">Hiring</a>
+      </li>
+      <li>
+        <a class:selected={segment === 'sponsorship'} href="sponsorship">
           Sponsorship
         </a>
       </li>

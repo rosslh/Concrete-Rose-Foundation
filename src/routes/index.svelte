@@ -11,14 +11,11 @@
 <script>
   import { onMount } from "svelte";
 
-  import Timeline from "../components/Timeline.svelte";
   import InfoColumns from "../components/InfoColumns.svelte";
 
   onMount(async () => {
     gtag("config", "UA-93549235-6", { page_path: "/" });
   });
-
-  export let timeline = [];
 </script>
 
 <style>
@@ -68,7 +65,7 @@
 </style>
 
 <svelte:head>
-  <title>Queen's Vertical Farming Team</title>
+  <title>Concrete Rose Foundation</title>
 </svelte:head>
 <div class="root">
   <div class="fullScreen" style="background-image: url('background.jpg')">
@@ -78,14 +75,17 @@
           <picture class="logo">
             <source srcset="logo-white.webp" type="image/webp" />
             <source srcset="logo-white.png" type="image/png" />
-            <img src="logo-white.png" alt="Queen's Vertical Farming Team" />
+            <img src="logo-white.png" alt="Concrete Rose Foundation" />
           </picture>
         </div>
         <p>
-          “The Queen's Vertical Farming Team's mission is to develop a
-          functional, small scale vertical farm. Drawing inspiration from the
-          best current commercial practices, our goal is to gain a foothold as
-          an innovator in a rapidly-expanding industry.”
+          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.”
         </p>
       </div>
     </div>
@@ -95,20 +95,15 @@
 
       <h2>Who we are</h2>
       <p>
-        The Queen's Vertical Farming Team is Canada's first post-secondary
-        student-led vertical farming design team. This team allows members of
-        all disciplines to engage in a rapidly-developing industry, increase
-        their awareness of threats to the global food supply, and gain hands-on
-        experience in food cultivation. Program-specific opportunities allow for
-        students to gain experience with biochemistry, plant science,
-        computer-aided design, computer modelling, data analysis, and systems
-        design.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
       </p>
       <InfoColumns />
     </div>
-  </div>
-  <div class="contentWrapper">
-    <h2>Timeline</h2>
-    <Timeline {timeline} />
   </div>
 </div>

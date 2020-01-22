@@ -1,5 +1,3 @@
-import dateformat from "dateformat";
-
 function getData() {
   const teamFile = require("../../../content/team.json");
 
@@ -18,22 +16,13 @@ function getData() {
       };
     });
 
-  const timelineFile = require("../../../content/timeline.json");
-
-  const timeline = timelineFile
-    .map(item => ({ ...item, date: `${item.date}-02` }))
-    .map(item => ({
-      prettyDate: dateformat(item.date, "mmmm yyyy"),
-      ...item
-    }))
-    .sort((a, b) => new Date(a.date) - new Date(b.date));
-  return { team, timeline };
+  return { team };
 }
 
 export function get(req, res) {
   res.writeHead(200, {
     "Content-Type": "application/json"
   });
-  const { team, timeline } = getData();
-  res.end(JSON.stringify({ team, timeline }));
+  const { team } = getData();
+  res.end(JSON.stringify({ team }));
 }

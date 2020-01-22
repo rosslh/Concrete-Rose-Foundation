@@ -11,7 +11,6 @@
 <script>
   import { onMount } from "svelte";
   import TeamImages from "../components/TeamImages.svelte";
-  import PageHeader from "../components/PageHeader.svelte";
 
   onMount(async () => {
     gtag("config", "UA-93549235-6", { page_path: "/team" });
@@ -20,7 +19,6 @@
 </script>
 
 <svelte:head>
-  <title>Our Team | Queen's Vertical Farming Team</title>
+  <title>Our Team | Concrete Rose Foundation</title>
 </svelte:head>
-<PageHeader>Our Team</PageHeader>
 <TeamImages {team} />

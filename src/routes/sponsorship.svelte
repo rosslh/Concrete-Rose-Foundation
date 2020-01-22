@@ -1,6 +1,5 @@
 <script>
   import { onMount } from "svelte";
-  import PageHeader from "../components/PageHeader.svelte";
 
   onMount(async () => {
     gtag("config", "UA-93549235-6", { page_path: "/sponsorship" });
@@ -49,13 +48,12 @@
 </style>
 
 <svelte:head>
-  <title>Queen's Vertical Farming Team</title>
+  <title>Concrete Rose Foundation</title>
 </svelte:head>
-<PageHeader>Sponsorship</PageHeader>
 <div class="contentWrapper desktop">
   <p>
     <a
-      href="QVFT_Sponsorship.pdf"
+      href="Sponsorship.pdf"
       download
       on:click={() => gtag('event', 'download sponsorship package')}>
       Download our sponsorship package here
@@ -66,16 +64,16 @@
       width="100%"
       height="100%"
       title="Sponsorship"
-      data="QVFT_Sponsorship.pdf"
+      data="Sponsorship.pdf"
       type="application/pdf">
       <embed
         title="Sponsorship"
         width="100%"
-        src="QVFT_Sponsorship.pdf"
+        src="Sponsorship.pdf"
         type="application/pdf" />
     </object>
   </div>
 </div>
 <div class="contentWrapper mobile">
-  <a class="button" href="QVFT_Sponsorship.pdf">View Sponsorship Package</a>
+  <a class="button" href="Sponsorship.pdf">View Sponsorship Package</a>
 </div>
