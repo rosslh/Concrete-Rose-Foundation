@@ -11,7 +11,6 @@
     selectedMember = member;
     if (selectedMember) {
       document.body.style.overflow = "hidden";
-      gtag("event", "view_item", { event_label: selectedMember.name });
     } else {
       document.body.style.overflow = "visible";
     }
@@ -91,7 +90,7 @@
 
   div.position {
     color: var(--darkGrey);
-    font-weight: 500;
+    font-weight: 700;
     font-style: italic;
   }
   div.position,
@@ -152,7 +151,7 @@
     padding: 0;
     margin: 0;
     text-transform: unset;
-    font-weight: 500;
+    font-weight: 700;
   }
 
   div.modalHead > div.modalImageWrapper {
@@ -163,7 +162,7 @@
     margin-right: 1.2rem;
   }
 
-  .modal div.modalImageWrapper picture > * {
+  .modal div.modalImageWrapper .teamMemberImage > * {
     height: 100%;
     width: 100%;
   }
@@ -219,17 +218,11 @@
     <div class="modalContent contentWrapper">
       <div class="modalHead">
         <div class="modalImageWrapper">
-          <picture class="teamMemberImage">
-            <source
-              srcset="{`/team/${selectedMember.image}`}.webp"
-              type="image/webp" />
-            <source
-              srcset="{`/team/${selectedMember.image}`}.jpeg"
-              type="image/jpg" />
+          <div class="teamMemberImage">
             <img
               src="{`/team/${selectedMember.image}`}.jpeg"
               alt={selectedMember.name} />
-          </picture>
+          </div>
         </div>
         <div class="nameAndPosition">
           <h3>{selectedMember.name}</h3>
@@ -288,11 +281,9 @@
         }
       }}>
       <div class="imageWrapper">
-        <picture class="teamMemberImage">
-          <source srcset="{`/team/${member.image}`}.webp" type="image/webp" />
-          <source srcset="{`/team/${member.image}`}.jpeg" type="image/jpg" />
+        <div class="teamMemberImage">
           <img src="{`/team/${member.image}`}.jpeg" alt={member.name} />
-        </picture>
+        </div>
         <div class="caption">
           <div class="name">{member.name}</div>
           <div class="position">{member.position}</div>

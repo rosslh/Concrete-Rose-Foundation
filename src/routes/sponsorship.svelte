@@ -1,11 +1,3 @@
-<script>
-  import { onMount } from "svelte";
-
-  onMount(async () => {
-    gtag("config", "UA-93549235-6", { page_path: "/sponsorship" });
-  });
-</script>
-
 <style>
   div.pdfWrapper {
     margin-top: 2rem;
@@ -52,12 +44,7 @@
 </svelte:head>
 <div class="contentWrapper desktop">
   <p>
-    <a
-      href="Sponsorship.pdf"
-      download
-      on:click={() => gtag('event', 'download sponsorship package')}>
-      Download our sponsorship package here
-    </a>
+    <a href="Sponsorship.pdf" download>Download our sponsorship package here</a>
   </p>
   <div class="pdfWrapper">
     <object

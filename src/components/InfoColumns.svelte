@@ -53,11 +53,7 @@
   {#each info as item}
     <div class="item">
       <div class="imageWrapper">
-        <picture>
-          <source srcset="{item.img}.webp" type="image/webp" />
-          <source srcset="{item.img}.png" type="image/png" />
-          <img src="{item.img}.png" alt={item.label} />
-        </picture>
+        <img src="{item.img}.png" alt={item.label} />
       </div>
       <div class="itemLabel">{item.label}</div>
     </div>

@@ -4,25 +4,26 @@
 
 <style>
   nav {
-    border-top: 3px solid var(--themeColor);
-    font-weight: 500;
-    text-transform: uppercase;
+    font-weight: 700;
     font-size: 0.9rem;
-    position: sticky;
     top: 0;
     left: 0;
     right: 0;
-    min-height: 3rem;
+    min-height: 10rem;
     /* overflow: hidden; */
     box-sizing: content-box;
     z-index: 24;
-    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    padding: 0 1rem;
+    margin-bottom: -4rem;
   }
 
-  nav div.contentWrapper {
+  nav > div {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    flex-grow: 1;
   }
 
   ul {
@@ -43,68 +44,51 @@
     margin: 0 0.8rem;
   }
 
-  a::after {
-    position: absolute;
-    content: "";
-    width: 80%;
-    margin-left: 10%;
-    height: 4px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    background-color: var(--themeColor);
-    display: block;
-    bottom: 0;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-  }
-
-  a.selected::after {
-    transform: scaleX(1);
+  a.selected {
+    color: var(--themeColor) !important;
   }
 
   a {
     position: relative;
     text-decoration: none;
-    height: 3rem;
     display: flex;
     align-items: center;
     transition: color 0.3s ease;
     color: var(--darkGrey) !important;
+    min-height: 5rem;
   }
 
-  picture.logo > * {
-    height: 2rem;
-    width: 2rem;
+  .logo {
+    margin-top: 1rem;
+  }
+  .logo > * {
+    max-height: 10rem;
   }
 </style>
 
 <nav>
-  <div class="contentWrapper">
+  <div>
     <div class="logo">
-      <a class:selected={!segment} href=".">
-        <picture class="logo">
-          <source srcset="logo.webp" type="image/webp" />
-          <source srcset="logo.png" type="image/png" />
+      <a class="logoLink" class:selected={!segment} href=".">
+        <div class="logo">
           <img src="logo.png" alt="Concrete Rose Foundation" />
-        </picture>
+        </div>
       </a>
     </div>
     <ul>
       <li>
-        <a class:selected={segment === 'what-we-do'} href="what-we-do">
-          What We Do
-        </a>
-      </li>
-      <li>
-        <a class:selected={segment === 'team'} href="team">Our Team</a>
-      </li>
-      <li>
-        <a class:selected={segment === 'hiring'} href="hiring">Hiring</a>
+        <a class:selected={segment === 'about'} href="about">About</a>
       </li>
       <li>
         <a class:selected={segment === 'sponsorship'} href="sponsorship">
-          Sponsorship
+          Sponsors
         </a>
+      </li>
+      <li>
+        <a class:selected={segment === 'donate'} href="donate">Donate</a>
+      </li>
+      <li>
+        <a class:selected={segment === 'contact'} href="contact">Contact</a>
       </li>
     </ul>
   </div>
