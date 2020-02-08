@@ -9,6 +9,8 @@
 </script>
 
 <script>
+  import { _ } from "svelte-i18n";
+
   import InfoColumns from "../components/InfoColumns.svelte";
   import Overlay from "../components/Overlay.svelte";
 </script>
@@ -26,7 +28,7 @@
   <div class="contentWrapper">
     <div class="twoColumns">
       <div class="firstColumn">
-        <h2>Improving education, health, and livelihoods in Egypt</h2>
+        <h2>{$_('page_title')}</h2>
         <div>
           Commodo deserunt excepteur incididunt anim culpa deserunt. Elit Lorem
           irure sunt nisi reprehenderit cillum. Labore sint ipsum tempor

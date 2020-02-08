@@ -1,5 +1,5 @@
-import * as sapper from '@sapper/app';
-
+import * as sapper from "@sapper/app";
+import "./i18n.js";
 sapper.start({
-	target: document.querySelector('#sapper')
+  target: document.querySelector("#sapper")
 });

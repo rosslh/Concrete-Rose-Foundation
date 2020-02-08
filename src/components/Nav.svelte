@@ -1,5 +1,9 @@
 <script>
   export let segment;
+
+  import { locale } from "svelte-i18n";
+
+  $: nextLocale = $locale.startsWith("en") ? "ar" : "en";
 </script>
 
 <style>
@@ -26,29 +30,12 @@
     flex-grow: 1;
   }
 
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-
-  /* clearfix */
-  ul::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-
-  li {
-    display: inline-block;
-    padding: 0;
-    margin: 0 0.8rem;
-  }
-
   a.selected {
     color: var(--themeColor) !important;
   }
 
-  a {
+  a,
+  button {
     position: relative;
     text-decoration: none;
     display: flex;
@@ -56,6 +43,8 @@
     transition: color 0.3s ease;
     color: var(--darkGrey) !important;
     min-height: 5rem;
+    border: none;
+    background: none;
   }
 
   .logo {
@@ -63,6 +52,21 @@
   }
   .logo > * {
     max-height: 10rem;
+  }
+
+  .linkWrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .linkWrapper > * {
+    margin-left: 1rem;
+  }
+
+  img.flag {
+    max-height: 1.3rem;
+    max-width: 1.3rem;
+    margin-right: 0.5rem;
   }
 </style>
 
@@ -75,22 +79,30 @@
         </div>
       </a>
     </div>
-    <ul>
-      <li>
-        <a class:selected={segment === 'about'} href="about">About</a>
-      </li>
-      <li>
-        <a class:selected={segment === 'sponsorship'} href="sponsorship">
-          Sponsors
-        </a>
-      </li>
-      <li>
-        <a class:selected={segment === 'donate'} href="donate">Donate</a>
-      </li>
-      <li>
-        <a class:selected={segment === 'contact'} href="contact">Contact</a>
-      </li>
-    </ul>
+    <div class="linkWrapper">
+      <a class:selected={segment === 'about'} href="about">About</a>
+
+      <a class:selected={segment === 'sponsorship'} href="sponsorship">
+        Sponsors
+      </a>
+
+      <a class:selected={segment === 'donate'} href="donate">Donate</a>
+
+      <a class:selected={segment === 'contact'} href="contact">Contact</a>
+
+      <button
+        on:click={() => {
+          $locale = nextLocale;
+        }}>
+        {#if $locale.startsWith('en')}
+          <img class="flag" alt="Egyptian flag" src="arabic.png" />
+          Arabic
+        {:else}
+          <img class="flag" alt="British flag" src="english.png" />
+          English
+        {/if}
+      </button>
+    </div>
   </div>
 
 </nav>
